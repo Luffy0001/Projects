@@ -2,6 +2,7 @@ import random
 
 play = True
 count = 0
+
 while play == True:
     number = random.randint(1, 100)
     guess = int(input("Enter your guess: "))
@@ -18,9 +19,10 @@ while play == True:
             print(
                 f"You got it, the number was {number} and you got in in {count} tries.")
 
-    play_again = str(input("Play again? "))
-    if play_again == "y" or "yes":
+    play_again = input("Play again? y/n: ")
+    if play_again == "y":
         play = True
-    elif play_again == "n" or "no":
+    elif play_again == "n":
+        play = False
         print("Thanks for playing")
         break
